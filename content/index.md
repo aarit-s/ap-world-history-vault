@@ -17,20 +17,8 @@ period spines -- best entry points, each one indexes every region in that era:
 or jump by AP unit:
 - [[unit 1]] · [[unit 2]] · [[unit 3]] · [[unit 4]] · [[unit 5]] · [[unit 6]] · [[unit 7]] · [[unit 8]] · [[unit 9]]
 
-## how to study with this
+every region, religion, war, and movement covered in AP World History from 1200 CE to today, written in plain language and tied together with thousands of cross-links. open any note to see how it connects to the rest of history.
 
-- [[practice SAQs]] -- 10 self-graded SAQs covering the whole course
-- the **graph view** -- click random nodes, follow the wikilinks, trace causal chains
-- **search** (top right or `ctrl+k`) -- full-text across every note
-- **backlinks** (bottom of every note) -- shows what links TO the current page
+the period spines above are the broadest entry points -- each one acts as an index for the regions and themes of that era. unit pages map to the AP curriculum directly. individual notes go deep on people, places, and events.
 
-## graph view tricks
-
-- `[` and `]` -- rotate the graph
-- `s` -- toggle slow auto-spin
-- `r` -- reset rotation
-
-## conventions
-
-- casual voice -- this is study material, not a textbook
-- tab-indented bullets, heavy [[wikilinks]]
+use the search bar (top right) to jump straight to any topic, or open the graph view (bottom left) to see the whole knowledge map and navigate visually.
