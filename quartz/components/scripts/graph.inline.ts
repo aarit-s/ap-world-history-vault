@@ -366,10 +366,15 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const stage = app.stage
   stage.interactive = false
 
+  const rotationContainer = new Container({ isRenderGroup: true })
+  rotationContainer.pivot.set(width / 2, height / 2)
+  rotationContainer.position.set(width / 2, height / 2)
+  stage.addChild(rotationContainer)
+
   const labelsContainer = new Container<Text>({ zIndex: 3, isRenderGroup: true })
   const nodesContainer = new Container<Graphics>({ zIndex: 2, isRenderGroup: true })
   const linkContainer = new Container<Graphics>({ zIndex: 1, isRenderGroup: true })
-  stage.addChild(nodesContainer, labelsContainer, linkContainer)
+  rotationContainer.addChild(nodesContainer, labelsContainer, linkContainer)
 
   for (const n of graphData.nodes) {
     const nodeId = n.id
@@ -523,15 +528,36 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     )
   }
 
+  // graph rotation: keyboard shortcuts ([, ], r) and auto-spin (s)
+  let autoSpin = false
+  const rotateBy = (delta: number) => {
+    rotationContainer.rotation += delta
+  }
+  const handleKey = (e: KeyboardEvent) => {
+    // only react when the graph canvas is hovered or the user isn't typing
+    const tag = (document.activeElement?.tagName || "").toLowerCase()
+    if (tag === "input" || tag === "textarea" || (document.activeElement as HTMLElement)?.isContentEditable) return
+    if (e.key === "[") rotateBy(-Math.PI / 12) // -15°
+    else if (e.key === "]") rotateBy(Math.PI / 12) // +15°
+    else if (e.key === "r" || e.key === "R") {
+      rotationContainer.rotation = 0
+      autoSpin = false
+    } else if (e.key === "s" || e.key === "S") autoSpin = !autoSpin
+  }
+  document.addEventListener("keydown", handleKey)
+
   let stopAnimation = false
   function animate(time: number) {
     if (stopAnimation) return
+    if (autoSpin) rotationContainer.rotation += 0.002
     for (const n of nodeRenderData) {
       const { x, y } = n.simulationData
       if (!x || !y) continue
       n.gfx.position.set(x + width / 2, y + height / 2)
       if (n.label) {
         n.label.position.set(x + width / 2, y + height / 2)
+        // counter-rotate labels so they stay upright when the graph rotates
+        n.label.rotation = -rotationContainer.rotation
       }
     }
 
@@ -552,6 +578,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   requestAnimationFrame(animate)
   return () => {
     stopAnimation = true
+    document.removeEventListener("keydown", handleKey)
     app.destroy()
   }
 }

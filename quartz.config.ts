@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "aarit's ap world history vault",
+    pageTitle: "ap world history vault",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
