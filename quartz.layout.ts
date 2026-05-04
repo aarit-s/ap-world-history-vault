@@ -71,6 +71,11 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    Component.EditThisPage({
+      repo: "aarit-s/ap-world-history-vault",
+      branch: "main",
+      contentPath: "content",
+    }),
   ],
 }
 
