@@ -165,14 +165,16 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const height = Math.max(graph.offsetHeight, 250)
 
   // we virtualize the simulation and use pixi to actually render it
+  // distanceMax caps how far repulsion reaches so the graph stays a tight blob
+  // (without it, far-apart clusters keep pushing each other and form long arms)
   const simulation: Simulation<NodeData, LinkData> = forceSimulation<NodeData>(graphData.nodes)
-    .force("charge", forceManyBody().strength(-100 * repelForce))
+    .force("charge", forceManyBody().strength(-100 * repelForce).distanceMax(250))
     .force("center", forceCenter().strength(centerForce))
     .force("link", forceLink(graphData.links).distance(linkDistance))
     .force("collide", forceCollide<NodeData>((n) => nodeRadius(n)).iterations(3))
 
-  const radius = (Math.min(width, height) / 2) * 0.8
-  if (enableRadial) simulation.force("radial", forceRadial(radius).strength(0.2))
+  const radius = (Math.min(width, height) / 2) * 0.65
+  if (enableRadial) simulation.force("radial", forceRadial(radius).strength(0.35))
 
   // precompute style prop strings as pixi doesn't support css variables
   const cssVars = [
