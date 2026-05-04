@@ -8,6 +8,8 @@ NOT the same as one replacing the other -- both elements stay visible
 	virgin of guadalupe (mexico) -- catholic mary appearing as an indigenous woman
 	[[sikhism]] -- [[hinduism]] + [[islam]] in india
 	mestizo / mulatto / casta system -- racial syncretism in spanish americas
+	[[mughal]] empire tolerated religions lead to [[sikhism]]
+
 
 earlier examples:
 	[[buddhism]] in [[china]] mixed with daoism -> chan/zen
