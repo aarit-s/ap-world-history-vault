@@ -209,7 +209,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     const numLinks = graphData.links.filter(
       (l) => l.source.id === d.id || l.target.id === d.id,
     ).length
-    return 2 + Math.sqrt(numLinks)
+    // stronger curve so hubs visually dominate (Obsidian-like)
+    return 3 + 1.6 * Math.sqrt(numLinks)
   }
 
   let hoveredNodeId: string | null = null
@@ -254,12 +255,13 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     const tweenGroup = new TweenGroup()
 
     for (const l of linkRenderData) {
-      let alpha = 1
+      // softer baseline + clearer hover highlight (Obsidian-like)
+      let alpha = 0.45
 
       // if we are hovering over a node, we want to highlight the immediate neighbours
       // with full alpha and the rest with default alpha
       if (hoveredNodeId) {
-        alpha = l.active ? 1 : 0.2
+        alpha = l.active ? 1 : 0.1
       }
 
       l.color = l.active ? computedStyleMap["--gray"] : computedStyleMap["--lightgray"]
@@ -447,7 +449,8 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       simulationData: l,
       gfx,
       color: computedStyleMap["--lightgray"],
-      alpha: 1,
+      // softer baseline alpha so the graph feels airier (Obsidian-like)
+      alpha: 0.45,
       active: false,
     }
 
