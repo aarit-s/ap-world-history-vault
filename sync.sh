@@ -23,6 +23,9 @@ rsync -a --delete \
   --exclude 'index.md' \
   "$VAULT/" content/
 
+echo "▸ Converting tab-indented outlines → markdown bullets"
+python3 "$SITE_DIR/transform_tabs.py" content/ > /dev/null
+
 if git diff --quiet content/ && git diff --cached --quiet content/; then
   echo "▸ No changes to push. You're already in sync."
   exit 0

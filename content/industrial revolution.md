@@ -1,21 +1,21 @@
-the process by which states transformed from primairly agrarian economies to industrial ones
-goods for sale going from just hand to just machines
-changed alootttt like political power reordering socieities and making nations rich
-[[europe]]
-started in great britan because of the many waterways and britan also had a lot of coal and iron 
-coal power lead to more iron
-and lots of foriegn resources ([[dutch east india company]]) and ([[joint stock companies]]) and a bunch of colonialization in [[africa]]
-they also had a lot of food because of the green revolution 
-or things like potatos coming in because of the [[columbian exchange]]
-rapid urbanization  -- nicer cities 
-legal protection of private property 
+the process by which states transformed from primairly agrarian economies to industrial ones  
+goods for sale going from just hand to just machines  
+changed alootttt like political power reordering socieities and making nations rich  
+[[europe]]  
+started in great britan because of the many waterways and britan also had a lot of coal and iron  
+coal power lead to more iron  
+and lots of foriegn resources ([[dutch east india company]]) and ([[joint stock companies]]) and a bunch of colonialization in [[africa]]  
+they also had a lot of food because of the green revolution  
+or things like potatos coming in because of the [[columbian exchange]]  
+rapid urbanization  -- nicer cities  
+legal protection of private property
 
-factory system introduced
-(used to be water powered)
+factory system introduced  
+(used to be water powered)  
 spread quickly: because of the steam engine. they put it in really anything, ships, factories, and new innovation: trains
 
-world switch -- industrial became more popular and non industrial less
-[[indian ocean trade]] textiles from [[india]] mattered WAYY less because they could be made cheaper
+world switch -- industrial became more popular and non industrial less  
+[[indian ocean trade]] textiles from [[india]] mattered WAYY less because they could be made cheaper  
 quantity over quality
 
 france industrialized slow because they didnt have that much coal
@@ -30,13 +30,13 @@ state driven leads to lots of discomfort among people
 
 combustiion engine was mainly oil and came after the steam one
 
-lead to steel being used more chemical dyes and electricity like lightbulbs and cars and the telegraph 
+lead to steel being used more chemical dyes and electricity like lightbulbs and cars and the telegraph
 
 death of mercantalism: now its free trade
 
-adam smith pushes this and says basically mercantilism only prefers elites
-lead to capitalism 
-lead to companies that operate in multiple countries -> stock markets [[joint stock companies]] 2.0 
+adam smith pushes this and says basically mercantilism only prefers elites  
+lead to capitalism  
+lead to companies that operate in multiple countries -> stock markets [[joint stock companies]] 2.0  
 **The social classes** (CRITICAL — this was your SAQ 4 problem):
 
 - **Bourgeoisie** — middle class, factory owners, capitalists
