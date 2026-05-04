@@ -211,7 +211,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     const numLinks = graphData.links.filter(
       (l) => l.source.id === d.id || l.target.id === d.id,
     ).length
-    return 2 + 1.1 * Math.sqrt(numLinks)
+    return 1.5 + 0.7 * Math.sqrt(numLinks)
   }
 
   let hoveredNodeId: string | null = null
